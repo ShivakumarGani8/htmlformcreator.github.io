@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form creator</title>
+	<link rel="stylesheet" href="./index.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<style>
+	*{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+	body{
+		background-color: #212529;
+        color:rgba(255, 255, 255, 0.836);
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.help-docs{
+		display: flex;
+		justify-content: space-between;
+	}
+	a{
+		background-color: rgb(120, 133, 207);
+		display: flex;
+		text-decoration:none;
+		flex-wrap: wrap;
+		width: 50%;
+		height: 40px;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		border: 2px solid black;
+		border-radius: 5px;
+		font-weight:bold;
+	}
+	a:hover{
+		background-color: rgb(68, 93, 233);
+	}
+	button{
+		width: auto;
+		margin: 10px 0px;
+	}
+	.steps{
+		animation-name:steps;
+		animation-duration:1s;
+		animation-iteration-count: 50;
+		font-size: 1.5em;
+	}
+	@keyframes steps{
+		from{color:red;}
+		to{color:green;}
+	}
+	
+</style>
+<body>
+	<marquee><h3>This page helps you to convert your simple excel file into html form</h3></marquee>
+	<div class="help-docs">
+	<a href="./helpDoc.html">
+		<span>Help docs</span>
+	</a>
+	<a id='sampleExcel' href="./Standard Excel.xlsx" download>Standard Excel</a>
+	</div><br>
+	<h3 class="how-it-works">How it works?</h3>
+	<ol>
+		<li>Create a standard excel file as given in sample excel.</li>
+		<li>Click on choose file button to select your file.</li>
+		<li>After selecting your file click on create form button it'll create your form.</li>
+		<li>To view from click on view form button. </li>
+		<li>After viewing click on download button to download your form in txt file.</li>
+	</ol>
+	<div class="mb-3">
+		<label for="formFileSm" class="form-label">Select Excel File:</label>
+		<input class="form-control form-control-sm" id="formFileSm" type="file">
+	</div>
+	<div style="display: flex; justify-content: space-between;">
+		<button onclick="readExcel()" value=false id="convertForm" class="btn btn-outline-primary">create Form
+		</button>
+		<button onclick="viewForm()" value=false id="viewForm" class="btn btn-outline-primary" >View Form</button>
+	</div>
+	<div>
+		<button onclick = "downloadFile()" id="downloadFile" class="btn btn-outline-success"  ><img height='30px'src='./downloadIcon.png'/>Download</button>
+	</div>
+	<div id='myForm'>
+
+	</div>
+</body>
+	<!-- <script src="https://unpkg.com/read-excel-file@4.1.0/bundle/read-excel-file.min.js"></script> -->
+	<script src="./index.js"></script>
+</html>
+</html>	

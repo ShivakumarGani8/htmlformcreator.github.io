@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Document</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        background-color: #212529;
+        color:rgba(255, 255, 255, 0.836);
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    body{
+        margin-left: 10%;
+        font-size:1.25em ;
+    }
+    div{
+        margin: 10px;
+    }
+    h3,ul,ol,iframe{
+        margin: 10px;
+    }
+    li{
+        margin: 5px;
+    } 
+    ol,ul,img,iframe{
+        padding-left: 30px;
+    }
+	img{
+		width: 50rem;
+	}
+</style>
+<body>
+		<marquee behavior="" direction=""><h1>This page shows how to converts your excel questions into html form</h1></marquee>
+        <div class="how-it-works">
+            <h3>1. How it works?</h3>
+            <ol>
+                <li>Create a standard excel file as shown in example</li>
+                <li>Click on choose file button to select your file</li>
+                <li>After selecting your file click on create form button it'll create your form</li>
+                <li>To view from click on view form button </li>
+                <li>After viewing click on download button to download your form in txt file</li>
+            </ol>
+        </div>
+        <div class="sample-file">
+        <h3>2. The sample excel file is as show below</h3>
+            <img src="./ExcelExampleScreenShot.PNG" alt="Excel Example">
+            <ol>
+                <li>It consists six columns namely class_Name, ID,Type_Of_Answer,Question,No_Of_Options and Answers.
+                    <br><span style="color:red">&emsp;Note-<br>&emsp;1) Where all column names are not case sensitive<br>
+                    &emsp;2) The top row is fixed<br>
+                    &emsp;3) The fields in columns Type_Of_Answer, Question, No_Of_Options  and Options are mandatory<br>
+                    </span><br>
+                </li>
+                <li>The column Class_Name defines the class name of the question</li>
+                <li>The column ID defines the id of the question</li>
+                <li>
+                    The column Type_Of_Answer defines the type of answers for particular question
+                    <ul>
+                        <li>This column accept 3 fields(Multi_Choice_single_Answer, Multi_Choice_Multi_Answer and User_Input</li>
+                        <li>Multi_Choice_Single_Answer gives radio type of options for question (Where only one option is true)</li>
+                        <li>Multi_Choice_Multi_Answer gives checkbox type of options for a question (Where more than one options are true)</li>
+                        <li> User_input gives a textfield where user need to enter answer</li>
+                    </ul>
+                </li>
+                <li>The Question column defines the question</li>
+                <li>No_Of_Options accept a number where it defines the number of options for particular column</li>
+                <li>Options column defines the options for particular question<br><span style="color: red;">Note-<br>If the Type_Of_Answer is User_Input the field in answers column should be answer</span>
+                </li>
+            </ol>
+        </div>
+        <div class="sample-form">
+        <h3>3. The sample html form created looks like</h3>
+        <iframe src="formSample.html" width="600" height="300px"></iframe>
+        </div>     
+</body>
+</html>
