@@ -8,31 +8,23 @@
 </head>
 <style>
     *{
-        margin: 0px;
-        padding: 0px;
         box-sizing: border-box;
         background-color: #212529;
         color:rgba(255, 255, 255, 0.836);
         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
-    body{
-        margin-left: 10%;
-        font-size:1.25em ;
-    }
-    div{
-        margin: 10px;
-    }
-    h3,ul,ol,iframe{
-        margin: 10px;
-    }
     li{
-        margin: 5px;
-    } 
-    ol,ul,img,iframe{
-        padding-left: 30px;
+        margin: 5px 0px;
     }
+    body{
+		position: relative;
+		font-size: 20px;
+		background-color: #212529;
+        color:rgba(255, 255, 255, 0.836);
+		box-sizing: inherit;
+	}
 	img{
-		width: 50rem;
+		width: 90vw;
 	}
 </style>
 <body>
@@ -51,32 +43,35 @@
         <h3>2. The sample excel file is as show below</h3>
             <img src="./ExcelExampleScreenShot.PNG" alt="Excel Example">
             <ol>
-                <li>It consists six columns namely class_Name, ID,Type_Of_Answer,Question,No_Of_Options and Answers.
-                    <br><span style="color:red">&emsp;Note-<br>&emsp;1) Where all column names are not case sensitive<br>
-                    &emsp;2) The top row is fixed<br>
-                    &emsp;3) The fields in columns Type_Of_Answer, Question, No_Of_Options  and Options are mandatory<br>
-                    </span><br>
+                <li>It consists six columns namely class_Name, ID, Type_Of_Answer, Question, No_Of_Options and Answers.
+                    <ol style="list-style-type:lower-alpha">
+                        <li>Where all column names are not case sensitive.</li>
+                        <li>The top row is fixed.</li>
+                        <li>Where the fields in all the columns are mandatory.</li>
+                    </ol>
                 </li>
                 <li>The column Class_Name defines the class name of the question</li>
                 <li>The column ID defines the id of the question</li>
                 <li>
                     The column Type_Of_Answer defines the type of answers for particular question
                     <ul>
-                        <li>This column accept 3 fields(Multi_Choice_single_Answer, Multi_Choice_Multi_Answer and User_Input</li>
+                        <li>This column accept 3 fields (Multi_Choice_single_Answer, Multi_Choice_Multi_Answer and User_Input</li>
                         <li>Multi_Choice_Single_Answer gives radio type of options for question (Where only one option is true)</li>
                         <li>Multi_Choice_Multi_Answer gives checkbox type of options for a question (Where more than one options are true)</li>
-                        <li> User_input gives a textfield where user need to enter answer</li>
+                        <li>User_input gives a textfield where user need to enter answer</li>
                     </ul>
                 </li>
                 <li>The Question column defines the question</li>
                 <li>No_Of_Options accept a number where it defines the number of options for particular column</li>
-                <li>Options column defines the options for particular question<br><span style="color: red;">Note-<br>If the Type_Of_Answer is User_Input the field in answers column should be answer</span>
+                <li>Options column defines the options for particular question<br><span style="color: red;">Note- If the Type_Of_Answer is User_Input the field in options column should be answer</span>
                 </li>
+                <li>The Options_Class column defines the class name for the options</li>
+                <li>The column Options_ID defines the id of the options</li>
             </ol>
         </div>
         <div class="sample-form">
         <h3>3. The sample html form created looks like</h3>
-        <iframe src="formSample.html" width="600" height="300px"></iframe>
+        <iframe src="formSample.html" width="100%" height="300"></iframe>
         </div>     
 </body>
 </html>

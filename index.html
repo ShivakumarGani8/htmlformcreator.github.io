@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form creator</title>
-	<link rel="stylesheet" href="./index.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
@@ -14,31 +13,34 @@
         margin: 0px;
         padding: 0px;
         box-sizing: border-box;
-        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-family:'Source Sans Pro', sans-serif;
     }
 	body{
+		position: relative;
+		font-size: 20px;
 		background-color: #212529;
         color:rgba(255, 255, 255, 0.836);
-		margin-left: auto;
-		margin-right: auto;
+		margin: 0% 5% 0%;
+		padding-top: 10px;
+		box-sizing: inherit;
 	}
 	.help-docs{
 		display: flex;
 		justify-content: space-between;
+		flex-grow: 1;	
 	}
 	a{
 		background-color: rgb(120, 133, 207);
-		display: flex;
 		text-decoration:none;
-		flex-wrap: wrap;
-		width: 50%;
-		height: 40px;
-		align-items: center;
-		justify-content: center;
+		width:auto;
 		color: white;
 		border: 2px solid black;
 		border-radius: 5px;
-		font-weight:bold;
+		font-weight:900;
+		text-align: center;
+		padding: 0.75rem;
+		font-size: 1rem;
+
 	}
 	a:hover{
 		background-color: rgb(68, 93, 233);
@@ -47,25 +49,26 @@
 		width: auto;
 		margin: 10px 0px;
 	}
-	.steps{
-		animation-name:steps;
+	a span{
+		animation-name:glow;
 		animation-duration:1s;
-		animation-iteration-count: 50;
-		font-size: 1.5em;
+		animation-iteration-count:infinite;
 	}
-	@keyframes steps{
-		from{color:red;}
-		to{color:green;}
+	@keyframes glow{
+		from{color:rgb(253, 253, 253);}
+		to{color:rgb(187, 144, 81);}
 	}
-	
+	textarea{
+		width: 100%;
+	}
 </style>
 <body>
 	<marquee><h3>This page helps you to convert your simple excel file into html form</h3></marquee>
 	<div class="help-docs">
 	<a href="./helpDoc.html">
-		<span>Help docs</span>
+		<span >Help docs</span>
 	</a>
-	<a id='sampleExcel' href="./Standard Excel.xlsx" download>Standard Excel</a>
+	<a id='sampleExcel' href="./Standard Excel.xlsx" download><span>Standard Excel</span></a>
 	</div><br>
 	<h3 class="how-it-works">How it works?</h3>
 	<ol>
@@ -91,7 +94,7 @@
 
 	</div>
 </body>
-	<!-- <script src="https://unpkg.com/read-excel-file@4.1.0/bundle/read-excel-file.min.js"></script> -->
+	<script src="https://unpkg.com/read-excel-file@4.1.0/bundle/read-excel-file.min.js"></script>
 	<script src="./index.js"></script>
 </html>
 </html>	
